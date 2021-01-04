@@ -1,0 +1,32 @@
+plugins {
+	id "java"
+}
+
+apply from: "deploy.gradle"
+
+group "io.xydez.airqueue"
+version "1.0.0"
+
+sourceSets {
+	main {
+		java {
+			srcDirs = ["src"]
+		}
+		resources {
+			srcDirs = ["assets"]
+		}
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+}
+
+dependencies {
+	compileOnly "net.md-5:bungeecord-api:1.12-SNAPSHOT"
+}
+
+jar {
+	from configurations.compile.collect { fileTree("assets") }
+}

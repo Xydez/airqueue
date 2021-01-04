@@ -1,0 +1,4 @@
+name: AirQueue
+main: io.xydez.airqueue.AirQueue
+version: 1.0.0
+author: Xydez

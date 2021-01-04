@@ -1,0 +1,11 @@
+# Folders
+.gradle/
+.vscode/
+.settings/
+bin/
+build/
+
+# Files
+.classpath
+.project
+deploy.gradle
